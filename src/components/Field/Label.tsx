@@ -1,13 +1,14 @@
 import React from 'react';
 import { useField } from '../../context/FieldContext';
+import { StyledLabel } from './styles';
 
 export const Label = React.forwardRef<
   HTMLLabelElement,
   React.ComponentPropsWithoutRef<'label'>
 >((props, ref) => {
   const id = useField();
-  
-  return <label ref={ref} htmlFor={id} {...props} />;
+
+  return <StyledLabel ref={ref} htmlFor={id} {...props} />;
 });
 
 Label.displayName = 'Field.Label';

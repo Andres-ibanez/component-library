@@ -1,6 +1,15 @@
 import styled, { css } from 'styled-components';
 import { ButtonProps } from './Button';
 import { transparentize } from 'polished';
+import {
+  DANGER_COLOR,
+  DANGER_TEXT_COLOR,
+  DISABLED_OPACITY,
+  PRIMARY_COLOR,
+  PRIMARY_TEXT_COLOR,
+  SECONDARY_COLOR,
+  SECONDARY_TEXT_COLOR,
+} from '../../utils/styles';
 
 const colorStyles = (p: ButtonProps) => {
   let color = SECONDARY_TEXT_COLOR,
@@ -25,14 +34,6 @@ const colorStyles = (p: ButtonProps) => {
     }
   `;
 };
-
-export const SECONDARY_COLOR = '#ced4da';
-export const SECONDARY_TEXT_COLOR = '#000';
-export const PRIMARY_COLOR = '#0a58ca';
-export const PRIMARY_TEXT_COLOR = '#fff';
-export const DANGER_COLOR = '#dc3545';
-export const DANGER_TEXT_COLOR = '#fff';
-export const DISABLED_OPACITY = 0.65;
 
 export const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;

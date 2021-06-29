@@ -1,5 +1,6 @@
 import React from 'react';
 import { useField } from '../../context/FieldContext';
+import { StyledInput } from './styles';
 
 export const Input = React.forwardRef<
   HTMLInputElement,
@@ -7,7 +8,7 @@ export const Input = React.forwardRef<
 >((props, ref) => {
   const id = useField();
 
-  return <input ref={ref} id={id} {...props} />;
+  return <StyledInput ref={ref} id={id} {...props} />;
 });
 
 Input.displayName = 'Field.Input';
